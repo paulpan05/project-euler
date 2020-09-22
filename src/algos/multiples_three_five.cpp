@@ -1,7 +1,8 @@
 #include "algos/multiples_three_five.hpp"
 
-using namespace std;
-
 int multiples_three_five(int number) {
-  return 0;
+  int count_3 = (number - 1) / 3;
+  int count_5 = (number - 1) / 5;
+  int count_15 = (number - 1) / 15;
+  return (3 * count_3 * (count_3 + 1) / 2) + (5 * count_5 * (count_5 + 1) / 2) - (15 * count_15 * (count_15 + 1) / 2);
 }
